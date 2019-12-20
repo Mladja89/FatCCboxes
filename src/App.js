@@ -49,7 +49,7 @@ headerButtons.forEach(btn => {
   if (btn.innerHTML === "Start") {
     btn.addEventListener("click", btnDo => {
       gameState.gameStarted = true;
-      btnDo.toElement.disabled = true;
+      btnDo.target.disabled = true;
       loadbar.classList.add("loadanim");
       setTimeout(() => {
         initGrid();
@@ -65,7 +65,7 @@ headerButtons.forEach(btn => {
   } else {
     gameState.resetState = btn;
     btn.addEventListener("click", btnDo => {
-      btnDo.toElement.disabled = true;
+      btnDo.target.disabled = true;
       gameState.undoState.disabled = true;
       gameState.selected = false;
       gameState.choosed = false;
